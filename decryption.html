@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <input type="text" id="str">
+      <button onclick="dec()">Decrypt</button>
+    <script type="text/javascript">
+      function dec(){
+      var str = document.getElementById("str").value;
+      var len = str.length, val, i;
+      for(i = 0; i < str.length; i++){
+        val = str.charCodeAt(i) - len;
+        document.write(String.fromCharCode(val));
+        len = -1 * len;
+      }
+    }
+    </script>
+  </body>
+</html>
